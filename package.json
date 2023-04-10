@@ -1,0 +1,21 @@
+{
+  "name": "becarioapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .",
+    "lint": "eslint ."
+  },
+  "author": "Sergio Guadarrama",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-group-routes": "^1.1.0",
+    "node": "^19.8.1",
+    "nodemon": "^2.0.22",
+    "uuid": "^9.0.0"
+  }
+}
