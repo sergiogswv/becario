@@ -6,7 +6,6 @@ exports.getItems = (req, res) => {
 }
 
 exports.postItems = (req, res) => {
-
   const { id, storeName, phone, webSite, photoUrl } = req.body
 
   try {
@@ -14,10 +13,11 @@ exports.postItems = (req, res) => {
       return res.json({ msg: 'The task is empty, please fill the fields :)' })
     }
 
-    newObject = {id, storeName, phone, webSite, photoUrl}
-    objects = {...objects, newObject}
+    newObject = { id, storeName, phone, webSite, photoUrl }
+    let newArray = objects
+    newArray.push(newObject)
 
-    res.json({ msg: 'Added Successful' })
+    res.json({ msg: 'Added Successful', newArray })
   } catch (error) {
     console.log(error)
   }
